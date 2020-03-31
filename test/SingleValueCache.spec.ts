@@ -24,7 +24,7 @@ describe('SingleValueCache', () => {
     expect(token).toEqual('token2')
   })
 
-  it('expires value correctly', done => {
+  it('expires value correctly', (done) => {
     const cache = new SingleValueCache(500)
     cache.set('token')
 
