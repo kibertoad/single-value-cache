@@ -1,19 +1,19 @@
 import { addMilliseconds, isBefore } from 'date-fns'
 
 export class SingleValueCache<V> {
-  private readonly ttl: number
+  private readonly ttlInMsecs: number
   private value: V | undefined
   private validUntil: Date
 
-  constructor(ttl: number) {
-    this.ttl = ttl
+  constructor(ttlInMsecs: number) {
+    this.ttlInMsecs = ttlInMsecs
     this.value = undefined
     this.validUntil = new Date(0)
   }
 
-  set(value: V, ttl?: number) {
+  set(value: V, ttlInMsecs?: number) {
     const now = new Date()
-    this.validUntil = addMilliseconds(now, ttl || this.ttl)
+    this.validUntil = addMilliseconds(now, ttlInMsecs || this.ttlInMsecs)
     this.value = value
   }
 
