@@ -8,6 +8,12 @@ describe('SingleValueCache', () => {
     expect(token).toEqual('token')
   })
 
+  it('default value is undefined', () => {
+    const cache = new SingleValueCache(500)
+    const token = cache.get()
+    expect(token).toBeUndefined()
+  })
+
   it('clears value correctly', () => {
     const cache = new SingleValueCache(500)
     cache.set('token')

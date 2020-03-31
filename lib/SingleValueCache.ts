@@ -7,7 +7,6 @@ export class SingleValueCache<V> {
 
   constructor(ttlInMsecs: number) {
     this.ttlInMsecs = ttlInMsecs
-    this.value = undefined
     this.validUntil = new Date(0)
   }
 
@@ -19,9 +18,13 @@ export class SingleValueCache<V> {
 
   get(): V | undefined {
     const now = new Date()
+
+    // If value didn't expire, return it
     if (isBefore(now, this.validUntil)) {
       return this.value
     }
+
+    // Value expired, clear it
     this.clear()
     return undefined
   }
