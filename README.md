@@ -1,5 +1,10 @@
 # single-value-cache
 
+[![npm version](http://img.shields.io/npm/v/single-value-cache.svg)](https://npmjs.org/package/single-value-cache)
+![](https://github.com/kibertoad/single-value-cache/workflows/unit-tests/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/kibertoad/single-value-cache/badge.svg?branch=master)](https://coveralls.io/r/kibertoad/single-value-cache?branch=master)
+
+
 ## Description 
 
 Simple, TTL-based Node.js cache for single values.
