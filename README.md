@@ -4,9 +4,6 @@
 ![](https://github.com/kibertoad/single-value-cache/workflows/unit-tests/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/kibertoad/single-value-cache/badge.svg?branch=master)](https://coveralls.io/r/kibertoad/single-value-cache?branch=master)
 
-
-## Description 
-
 Simple, TTL-based Node.js cache for single values.
 Returns `undefined` if user attempts to retrieve expired value.
 

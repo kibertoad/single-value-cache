@@ -1,7 +1,8 @@
 {
   "name": "single-value-cache",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
+  "description": "Simple, TTL-based Node.js cache for single values",
   "maintainers": [
     {
       "name": "Igor Savin",
@@ -35,8 +36,16 @@
     "typescript": "^4.1.3"
   },
   "homepage": "http://github.com/kibertoad/single-value-cache",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kibertoad/single-value-cache.git"
+  },
   "keywords": [
-    "cache"
+    "cache",
+    "single",
+    "value",
+    "ttl",
+    "fast"
   ],
   "files": [
     "README.md",
